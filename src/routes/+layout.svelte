@@ -16,7 +16,6 @@
       console.error('Fehler beim Abrufen der Daten von Contentful:', error)
     }
   }
-  console.log(data)
   onMount(() => {
     fetchData()
   })

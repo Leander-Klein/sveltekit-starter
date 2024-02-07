@@ -1,42 +1,42 @@
-//Inhalt von contentful.js
-import * as contentful from 'contentful';
-console.log("test");
+// //Inhalt von contentful.js
+// import * as contentful from 'contentful';
+// console.log("test");
 
-const spaceId = 'zcaut8zny79j';
-const accessToken = 'barvv1Ke4ZD95chfJro2W4GVNLstiVDPLCidapyQZWA';
+// const spaceId = 'zcaut8zny79j';
+// const accessToken = 'barvv1Ke4ZD95chfJro2W4GVNLstiVDPLCidapyQZWA';
 
-export const client = contentful.createClient({
-    space: spaceId,
-    accessToken: accessToken
-});
+// export const client = contentful.createClient({
+//     space: spaceId,
+//     accessToken: accessToken
+// });
 
-client.getEntries({ content_type: 'Product' })
-    .then((response) => {
-        // Hier hast du Zugriff auf die Daten in response.items
-        console.log(response);
-    })
-    .catch((error) => {
-        console.log(`Error fetching content: ${error.message}`);
-    });
+// client.getEntries({ content_type: 'Product' })
+//     .then((response) => {
+//         // Hier hast du Zugriff auf die Daten in response.items
+//         console.log(response);
+//     })
+//     .catch((error) => {
+//         console.log(`Error fetching content: ${error.message}`);
+//     });
 
-// Importieren Sie Axios und ggf. das Svelte Store-Paket
-import axios from 'axios';
+// // Importieren Sie Axios und ggf. das Svelte Store-Paket
+// import axios from 'axios';
 
-// Definieren Sie Ihre Contentful-Endpunkte
-const apiUrl = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}`;
+// // Definieren Sie Ihre Contentful-Endpunkte
+// const apiUrl = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}`;
 
-// Erstellen Sie eine Funktion zum Abrufen von Daten
-async function fetchData() {
-    try {
-        const response = await axios.get(apiUrl);
-        // Hier können Sie die Daten verarbeiten oder im Store speichern
-        console.log(response.data);
-    } catch (error) {
-        console.error('Fehler beim Abrufen der Daten von Contentful:', error);
-    }
-}
+// // Erstellen Sie eine Funktion zum Abrufen von Daten
+// async function fetchData() {
+//     try {
+//         const response = await axios.get(apiUrl);
+//         // Hier können Sie die Daten verarbeiten oder im Store speichern
+//         console.log(response.data);
+//     } catch (error) {
+//         console.error('Fehler beim Abrufen der Daten von Contentful:', error);
+//     }
+// }
 
-// Rufen Sie die fetchData-Funktion auf, wenn Ihre Komponente montiert wird
-onMount(() => {
-    fetchData();
-});
+// // Rufen Sie die fetchData-Funktion auf, wenn Ihre Komponente montiert wird
+// onMount(() => {
+//     fetchData();
+// });
