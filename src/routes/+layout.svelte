@@ -2,8 +2,8 @@
   import { onMount } from 'svelte'
   import axios from 'axios'
 
-  const spaceId = 'zcaut8zny79j'
-  const accessToken = 'barvv1Ke4ZD95chfJro2W4GVNLstiVDPLCidapyQZWA'
+  const spaceId = ''
+  const accessToken = ''
   const apiUrl = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}`
 
   let data = []
